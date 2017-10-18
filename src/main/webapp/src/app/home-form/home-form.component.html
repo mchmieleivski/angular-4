@@ -1,0 +1,100 @@
+<div class="container-fluid" style="background: #f1f3f6;min-height: 100%">
+    <!--<form>-->
+    <div class="row">
+        <div class="col-xs-12 text-right">
+            <button type="button" class="btn btn-default pull-right m-xs" [routerLink]=" ['../']">Cancelar</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="hpanel">
+                 <small style="margin-top:15px;font-size: 14px;font-weight: 600;text-transform: uppercase; color: gray; " >Bandeja de ingreso de xls con Ordenes de Compra vigentes </small>
+                <div class="panel-heading">
+                    Ingreso de batch . . 
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                               <div class="col-lg-6 col-xs-12">
+       
+          <div style="padding: 0,9cm; display:inline-flex">
+            <label class="btn btn-default pull-right m-xs">
+                <i class="fa fa-file-excel-o"></i>&nbsp;Archivo  <input type="file"
+                (change)="fileChangeEvent($event)" >
+               
+              </label>
+                        </div>
+                      
+</div>
+ <button type="button" class="btn btn-success pull-right m-xs"><i class="fa fa-cloud-upload"></i> Subir Ordenes de Compra</button>
+                        </div>
+                    </div>
+                </div>
+                  </div>
+                      <div class="row">
+                   <div class="col-md-12">
+            <div class="hpanel">
+                <div class="panel-heading">
+                    buscar Historico de Archivos
+                </div>
+                <div class="panel-body ">
+                    <div class="row">
+                       <div class="col-lg-4 col-md-6 col-sm-6 form-group">
+                <label for="munFechaOrdenanzaInput">Fecha desde</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                  <input class="form-control input-sm" type="date" id="munFechaOrdenanzaInput" name="munFechaOrdenanza" />
+                </div>
+              </div>     
+                 <div class="col-lg-4 col-md-6 col-sm-6 form-group">
+                <label for="munFechaFinConvenioInput">Fecha hasta</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                  <input class="form-control input-sm" type="date" id="munFechaFinConvenioInput" name="munFechaFinConvenio" />
+                </div>
+              </div>  
+               <div class="col-xs-2 text-right">
+                            <label style="margin-bottom:0;color:transparent;"> </label>
+                            <p class="input-group input-group-sm" style="width: 100%">
+                                <button class="btn btn-primary btn-sm" ladda="buscando" type="button"><i class="fa fa-search"></i> Buscar</button>
+                            </p>
+                        </div>
+                </div>        
+                <div class="panel-body p-none" style="padding-top: 0px;padding-bottom: 0px;">
+                    <table class="table table-slim table-hover table-striped m-b-none" cellpadding="1" cellspacing="1">
+                        <thead>
+                            <tr class="text-uppercase">
+                                <th class="text-center" style="border-top: none;">ID</th>
+                                <th class="text-center" style="border-top: none;">Fecha</th>
+                                <th class="text-center" style="border-top: none;">Archivo</th>
+                                <th class="text-center" style="border-top: none;">Estado </th>
+                            
+                              
+    
+                                  <th class="text-center" style="border-top: none;width: 14px;"></th>
+                                <th class="text-center" style="border-top: none;width: 14px;"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center" style="vertical-align: middle;">1</td>
+                                <td class="text-center" style="vertical-align: middle;">13/10/2017</td>
+                                 <td class="text-center" style="vertical-align: middle;">carga-masiva-stroeder.xlsx</td>
+                                 <td class="text-center" style="vertical-align: middle;">PROCESADO</td>
+                               
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                </th>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i></button>
+                                </th>
+                            </tr>  
+                                     </tbody>
+                    </table>
+                </div>  
+                      
+                        </div>
+                    </div>
+                   </div>
+                </div>
+</div>

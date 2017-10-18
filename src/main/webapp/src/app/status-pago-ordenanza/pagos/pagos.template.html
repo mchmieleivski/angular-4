@@ -1,0 +1,35 @@
+<table class="table table-slim table-hover table-striped m-b-none" cellpadding="1" cellspacing="1" style="overflow-x: scroll; overflow-y: scroll;">
+    <thead>
+        <tr>
+            <th class="text-center text-uppercase" style="border-top: none;">Ubicación Técnica (ID)</th>
+            <th class="text-center text-uppercase" style="border-top: none;">Nombre del Sitio</th>
+            <th class="text-center text-uppercase" style="border-top: none;">Fecha de Pago</th>
+            <th class="text-center text-uppercase" style="border-top: none;">Estado</th>
+            <th class="text-center text-uppercase" style="border-top: none;">Monto del Pago</th>
+            <th class="text-center text-uppercase" style="border-top: none;">Tiene Libre de Deuda</th>
+            <th class="text-center text-uppercase" style="border-top: none;">Fecha de Derivacion</th>
+            <th class="text-center text-uppercase" style="border-top: none;">Información adicional</th>
+            <th class="text-center text-uppercase" style="border-top: none;">Observaciones</th>
+        </tr>
+    </thead>
+    <tbody *ngIf="pagos != null">
+        <tr>
+            <td class="text-center">1</td>
+            <td class="text-center">Nombre sitio 1</td>
+            <td class="text-center">14/07/2010</td>
+            <td class="text-center">Pagado</td>
+            <td class="text-center">$600</td>
+            <td class="text-center">SI</td>
+            <td class="text-center">20/05/2010</td>
+            <td class="text-center"></td>
+            <td class="text-center"></td>
+        </tr>                    
+    </tbody>
+    <tfoot *ngIf="pagos == null">
+           <tr>
+               <td colspan="9" class="text-center">                
+                     <span><i class="glyphicon glyphicon-info-sign"></i> Sin Datos</span> 
+               </td>
+           </tr>
+       </tfoot>
+</table>

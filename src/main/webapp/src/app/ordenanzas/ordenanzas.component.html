@@ -1,0 +1,348 @@
+<div class="container-fluid" style="background: #f1f3f6;min-height: 100%">
+    <div class="row">
+        <div class="col-xs-12 m-b-none p-b-none">
+            <button class="btn btn-success btn-sm pull-right" type="button" [routerLink]="['/ordenanzas/nuevo']">
+                <i class="fa fa-search"></i> Iniciar Certificacion
+            </button>
+        </div>
+        <toaster-container></toaster-container>
+        <div class="col-xs-12">
+            <div class="hpanel">
+                <div class="panel-heading">
+                    Filtros
+                </div>
+                <div class="panel-body ">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label style="margin-bottom:0">Tipo de Obra</label>
+                            <p class="input-group input-group-sm" style="width: 100%">
+                                <input type="text" class="form-control" placeholder="Tipo de Obra" />
+                            </p>
+                        </div>         
+                        <div class="col-sm-3">
+                            <label style="margin-bottom:0">Código de Plan</label>
+                            <p class="input-group input-group-sm" style="width: 100%">
+                                <select class="form-control input-sm" name="provincia">
+                                            <option value="{{null}}">Todos</option>
+                                            <option>Argentina</option>
+                                            <option>Bolivia</option>
+                                            <option>Chile</option>
+                                            <option>Paraguay</option>
+                                </select>
+                            </p>
+                        </div>
+                        <div class="col-sm-3">
+                            <label style="margin-bottom:0">Id de Obra</label>
+                            <p class="input-group input-group-sm" style="width: 100%">
+                                <select class="form-control input-sm" name="provincia">
+                                            <option value="{{null}}">Todos</option>
+                                            <option>AMBA</option>
+                                            <option>INTERIOR</option>
+                                            <option>Paraguay</option>
+                                            <option>Uruguay</option>
+                                </select>
+                            </p>
+                        </div>              
+                        <div class="col-sm-3">
+                            <label style="margin-bottom:0">Origen de Obra</label>
+                            <p class="input-group input-group-sm" style="width: 100%">
+                                <select class="form-control input-sm" name="provincia">
+                                            <option value="{{null}}">Todas</option>
+                                            <option>Gerencia de Sitios</option>
+                                            <option>Catamarca</option>
+                                            <option>Gerencia de Red de Acceso</option>
+                                            <option>Entre Ríos</option>
+                                            <option>Formosa</option>
+                                            <option>Jujuy</option>
+                                            <option>Misiones</option>
+                                            <option>Salta</option>
+                                            <option>Santa Cruz</option>
+                                            <option>Tierra del Fuego</option>
+                                            <option>Tucumán</option>
+                                </select>
+                            </p>
+                        </div>
+                        <div class="col-sm-3">
+                            <label style="margin-bottom:0">Nro de Tipo de Trabajo	</label>
+                            <p class="input-group input-group-sm" style="width: 100%">
+                                <select class="form-control input-sm" name="provincia">
+                                            <option value="{{null}}">Todos</option>
+                                            <option>Colon</option>
+                                            <option>Capital</option>
+                                            <option>Punilla</option>
+                                </select>
+                            </p>
+                        </div>
+
+                    <!--*/    <div class="col-sm-3">
+                            <label style="margin-bottom:0">Localidad</label>
+                            <p class="input-group input-group-sm" style="width: 100%">
+                                <select class="form-control input-sm" name="provincia">
+                                            <option value="{{null}}">Todos</option>
+                                            <option>Cordoba</option>
+                                            <option>Cosquin</option>
+                                            <option>Carlos Paz</option>
+                                            <option>La Cumbre</option>
+                                            <option>La Falda</option>
+                                </select>
+                            </p>
+                        </div>
+                        <div class="col-sm-3">
+                            <label style="margin-bottom:0">Municipio</label>
+                            <p class="input-group input-group-sm" style="width: 100%">
+                                <select class="form-control input-sm" name="provincia">
+                                            <option value="{{null}}">Todas</option>
+                                            <option>Cordoba</option>
+                                            <option>Cosquin</option>
+                                            <option>Carlos Paz</option>
+                                            <option>La Cumbre</option>
+                                            <option>La Falda</option>
+                                </select>
+                            </p>
+                        </div>-->
+                        <div class="col-sm-3 form-group">
+                            <label style="margin-bottom:0">Fecha Desde</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                <input class="form-control input-sm" type="date" id="munFechaOrdenanzaInput" name="munFechaOrdenanza" />
+                            </div>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label style="margin-bottom:0">Fecha Hasta</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                <input class="form-control input-sm" type="date" id="munFechaOrdenanzaInput" name="munFechaOrdenanza" />
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <label style="margin-bottom:0">Estructura</label>
+                            <p class="input-group input-group-sm" style="width: 100%">
+                                <input type="text" class="form-control" placeholder="Estructura..." />
+                            </p>
+                        </div>
+                        <div class="col-xs-6 text-right">
+                            <label style="margin-bottom:0;color:transparent;"> </label>
+                            <p class="input-group input-group-sm" style="width: 100%">
+  <button type="submit" (click)="filtrar()" class="btn btn-info fa fa-search-plus "> Buscar</button>                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="hpanel">
+                <div class="panel-heading">
+                    Certificaciones disponibles por Orden de compra ingresadas
+                </div>
+
+                <div class="panel-body p-none" style="padding-top: 0px;padding-bottom: 0px;">
+                    <table class="table table-slim table-hover table-striped m-b-none" cellpadding="1" cellspacing="1">
+                        <thead>
+                            <tr class="text-uppercase">
+                                <th class="text-center" style="border-top: none;">ID solicitud</th>
+                                <th class="text-center" style="border-top: none;">Gerencia</th>
+                                <th class="text-center" style="border-top: none;">Codigo plan</th>
+                                <th class="text-center" style="border-top: none;">Pais</th>
+                                <th class="text-center" style="border-top: none;">Fecha Alta</th>
+                                <th class="text-center" style="border-top: none;">Vigente</th>
+                                <th class="text-center" style="border-top: none;width: 14px;"></th>
+                                <th class="text-center" style="border-top: none;width: 14px;"></th>
+                                <th class="text-center" style="border-top: none;width: 14px;"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center" style="vertical-align: middle;">1</td>
+                                
+                                <td class="text-center" style="vertical-align: middle;">Gerencia de Sitios</td>
+                                <td class="text-center" style="vertical-align: middle;">AR-2017 Plan - 1 </td>
+                                <td class="text-center" style="vertical-align: middle;">Argentina</td>
+                                <td class="text-center" style="vertical-align: middle;">20/09/2017</td>
+                              
+                                <td class="text-center" style="vertical-align: middle;">SI</td>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-success btn-xs" [routerLink]="['/ordenanzas/status-pago']"><i class="glyphicon glyphicon-cog"></i></button>
+                                </th>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                </th>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-link"></i></button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="text-center" style="vertical-align: middle;">2</td>
+                               
+                                <td class="text-center" style="vertical-align: middle;">Gerencia de Sitios</td>
+                                <td class="text-center" style="vertical-align: middle;">AR-2017 Plan - 1</td>
+                                <td class="text-center" style="vertical-align: middle;">Argentina</td>
+                                <td class="text-center" style="vertical-align: middle;"> 20/09/2017 </td>
+                            
+                                <td class="text-center" style="vertical-align: middle;">SI</td>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-success btn-xs" [routerLink]="['/ordenanzas/status-pago']"><i class="glyphicon glyphicon-cog"></i></button>
+                                </th>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                </th>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-link"></i></button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="text-center" style="vertical-align: middle;">3</td>
+                                <td class="text-center" style="vertical-align: middle;">Gerencia de Red de Acceso</td>
+                                <td class="text-center" style="vertical-align: middle;">AR-2017 Plan - 1</td>
+                                <td class="text-center" style="vertical-align: middle;">Argentina</td>
+                                <td class="text-center" style="vertical-align: middle;">20/09/2017</td>
+                              
+                                <td class="text-center" style="vertical-align: middle;">SI</td>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-success btn-xs" [routerLink]="['/ordenanzas/status-pago']"><i class="glyphicon glyphicon-cog"></i></button>
+                                </th>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                </th>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-link"></i></button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="text-center" style="vertical-align: middle;">4</td>
+                                <td class="text-center" style="vertical-align: middle;">Gerencia de Sitios</td>
+                                <td class="text-center" style="vertical-align: middle;">AR-2017 Plan - 1</td>
+                                <td class="text-center" style="vertical-align: middle;">Argentina</td>
+                                <td class="text-center" style="vertical-align: middle;">20/09/2017</td>
+                               
+                                <td class="text-center" style="vertical-align: middle;">SI</td>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-success btn-xs" [routerLink]="['/ordenanzas/status-pago']"><i class="glyphicon glyphicon-cog"></i></button>
+                                </th>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                </th>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-link"></i></button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="text-center" style="vertical-align: middle;">5</td>
+                                <td class="text-center" style="vertical-align: middle;">Gerencia de Sitios</td>
+                                <td class="text-center" style="vertical-align: middle;">AR-2017 Plan - 1</td>
+                                <td class="text-center" style="vertical-align: middle;">Argentina</td>
+                                <td class="text-center" style="vertical-align: middle;">20/09/2017</td>
+                                
+                                <td class="text-center" style="vertical-align: middle;">SI</td>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-success btn-xs" [routerLink]="['/ordenanzas/status-pago']"><i class="glyphicon glyphicon-cog"></i></button>
+                                </th>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                </th>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-link"></i></button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="text-center" style="vertical-align: middle;">6</td>
+                                <td class="text-center" style="vertical-align: middle;">Gerencia de Sitios</td>
+                                <td class="text-center" style="vertical-align: middle;">AR-2017 Plan - 1</td>
+                                <td class="text-center" style="vertical-align: middle;">Argentina</td>
+                                <td class="text-center" style="vertical-align: middle;">20/09/2017</td>
+                                
+                                <td class="text-center" style="vertical-align: middle;">SI</td>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-success btn-xs" [routerLink]="['/ordenanzas/status-pago']"><i class="glyphicon glyphicon-cog"></i></button>
+                                </th>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                </th>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-link"></i></button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="text-center" style="vertical-align: middle;">7</td>
+                                <td class="text-center" style="vertical-align: middle;">Gerencia de Red de Acceso</td>
+                                <td class="text-center" style="vertical-align: middle;">AR-2017 Plan - 1</td>
+                                <td class="text-center" style="vertical-align: middle;">Argentina</td>
+                                <td class="text-center" style="vertical-align: middle;">20/09/2017</td>
+                                
+                                <td class="text-center" style="vertical-align: middle;">SI</td>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-success btn-xs" [routerLink]="['/ordenanzas/status-pago']"><i class="glyphicon glyphicon-cog"></i></button>
+                                </th>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                </th>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-link"></i></button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="text-center" style="vertical-align: middle;">8</td>
+                                <td class="text-center" style="vertical-align: middle;">Gerencia de Sitios</td>
+                                <td class="text-center" style="vertical-align: middle;">AR-2017 Plan - 1</td>
+                                <td class="text-center" style="vertical-align: middle;">Argentina</td>
+                                <td class="text-center" style="vertical-align: middle;">20/09/2017</td>
+                               
+                                <td class="text-center" style="vertical-align: middle;">SI</td>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-success btn-xs" [routerLink]="['/ordenanzas/status-pago']"><i class="glyphicon glyphicon-cog"></i></button>
+                                </th>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                </th>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-link"></i></button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="text-center" style="vertical-align: middle;">9</td>
+                                <td class="text-center" style="vertical-align: middle;">Gerencia de Sitios</td>
+                                <td class="text-center" style="vertical-align: middle;">AR-2017 Plan - 1</td>
+                                <td class="text-center" style="vertical-align: middle;">Argentina</td>
+                                <td class="text-center" style="vertical-align: middle;">20/09/2017</td>
+                                
+                                <td class="text-center" style="vertical-align: middle;">SI</td>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-success btn-xs" [routerLink]="['/ordenanzas/status-pago']"><i class="glyphicon glyphicon-cog"></i></button>
+                                </th>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                </th>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-link"></i></button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="text-center" style="vertical-align: middle;">9</td>
+                                <td class="text-center" style="vertical-align: middle;">Gerencia </td>
+                                <td class="text-center" style="vertical-align: middle;">AR-2017 Plan - 1</td>
+                                <td class="text-center" style="vertical-align: middle;">Argentina</td>
+                                <td class="text-center" style="vertical-align: middle;">20/09/2017</td>
+                                
+                                <td class="text-center" style="vertical-align: middle;">SI</td>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-success btn-xs" [routerLink]="['/ordenanzas/status-pago']"><i class="glyphicon glyphicon-cog"></i></button>
+                                </th>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                </th>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-link"></i></button>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <span class="col-xs-12 text-right">
+                    <pagination style="margin:0" [totalItems]="totalItems" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)" previousText="anterior" nextText="siguiente" firstText="primera" lastText="última"></pagination>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

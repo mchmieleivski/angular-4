@@ -1,0 +1,70 @@
+<div class="container-fluid" style="background: #f1f3f6;min-height: 100%">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="hpanel">
+                <div class="panel-heading">
+             <small style="margin-top:15px;font-size: 14px;font-weight: 600;text-transform: uppercase; color: gray; " >Certificaciones </small>       
+                </div>
+                 <toaster-container></toaster-container>
+                <div class="panel-body ">
+                    <div class="row">
+                         <div class="col-xs-3 text-left">
+                            <label for="oc">Numero de Orden Compra</label>
+                             <ng2-completer [inputClass]="'form-control form-control-inline'" [(ngModel)]="searchStr" [datasource]="searchData" [minSearchLength]="3" [clearSelected]="false" (selected)="onSelected($event)"></ng2-completer>
+<!--                 <input class="form-control input-sm" ngModel  type="text" name="oc" #oc="ngModel"/> 
+-->                        </div>
+                      
+                        <div class="col-xs-3 text-left">
+                            <label style="margin-bottom:0;color:transparent;"> </label>
+                            <p class="input-group input-group-sm" style="width: 100%">
+                                <button class="btn btn-primary btn-sm" ladda="buscando" (click)="filtrar()" type="button"><i class="fa fa-search"></i> Buscar</button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="hpanel">
+                <div class="panel-heading">
+                    Orden de Compra
+                </div>
+                <div class="panel-body">
+                    <table class="table table-slim table-hover table-striped m-b-none" cellpadding="1" cellspacing="1" style="overflow-x: scroll">
+                        <thead>
+                            <tr>
+                                <th class="text-center text-uppercase" style="border-top: none;">Orden de Compra</th>
+                                <th class="text-center text-uppercase" style="border-top: none;">Posicion</th>
+                                <th class="text-center text-uppercase" style="border-top: none;">Fecha</th>
+                                <th class="text-center text-uppercase" style="border-top: none;">CellId</th>
+                                  <th class="text-center text-uppercase" style="border-top: none;">Contratista</th>
+                                <th class="text-center" style="border-top: none;width: 14px;"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th class="text-center">Orden Prueba</th>
+                                <th class="text-center">001</th>
+                                <th class="text-center">13/10/2017</th>
+                                <th class="text-center">CO008</th>
+                                 <th class="text-center">CERAGON ARGENTINA S.A</th>
+                             
+    
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-primary btn-xs" mwlConfirmationPopover [title]="title" [message]="message" (cancel)="cancelClicked = true" (confirm)="generarCertificacion()"><i class="glyphicon glyphicon-edit"></i>Iniciar Certificación</button>
+                                </th>
+                            </tr>
+                  
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <span class="col-xs-12 text-right">
+                    <pagination style="margin:0" [totalItems]="totalItems" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)" previousText="anterior" nextText="siguiente" firstText="primera" lastText="última"></pagination>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

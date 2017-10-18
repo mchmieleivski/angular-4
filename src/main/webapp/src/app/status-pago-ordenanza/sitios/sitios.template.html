@@ -1,0 +1,163 @@
+<table class="table table-slim table-hover table-striped m-b-none" cellpadding="1" cellspacing="1" style="overflow-x: scroll; overflow-y: scroll;">
+    <thead>
+        <tr>
+            <th class="text-center text-uppercase" style="border-top: none;">Seleccione</th>
+            <th class="text-center text-uppercase" style="border-top: none;">Ubicacción Técnica (ID)</th>
+            <th class="text-center text-uppercase" style="border-top: none;">Nombre del Sitio</th>
+            <th class="text-center text-uppercase" style="border-top: none;">Estructura</th>
+            <th class="text-center text-uppercase" style="border-top: none;">Localidad</th>
+            <th class="text-center text-uppercase" style="border-top: none;">Estado</th>
+            <th class="text-center text-uppercase" style="border-top: none;">Peso Sitio</th>
+            <th class="text-center text-uppercase" style="border-top: none;">Fecha Declaración en Municipio</th>
+            <th class="text-center text-uppercase" style="border-top: none;"></th>
+        </tr>
+    </thead>
+    <tbody *ngIf="sitios != null && sitios.length > 0">
+        <tr (click)="seleccionarSitio(sitio)" *ngFor="let sitio of sitios">
+            <td class="text-center" style="width: 14px;">
+                <label class="form-check-label">
+                    <input type="checkbox" id="blankCheckbox" [checked]="sitio.seleccionado" aria-label="...">
+                </label>
+            </td>                      
+            <td class="text-center">{{sitio.ubicacion}}</td>
+            <td class="text-center">{{sitio.nombre}}</td>
+            <td class="text-center">{{sitio.estructura}}</td>
+            <td class="text-center">{{sitio.localidad}}</td>
+            <td class="text-center">{{sitio.estado}}</td>
+            <td class="text-center">{{sitio.pesoSitio}}</td>
+            <td class="text-center">{{sitio.fchaDeclaracion}}</td>
+            <th class="text-center" style="width: 14px;">
+                <button (click)="editarSitio()" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+            </th>
+        </tr> 
+    </tbody>
+    <tfoot *ngIf="sitios == null || sitios.length < 1">
+        <tr>
+            <td colspan="8" class="text-center">                
+                  <span><i class="glyphicon glyphicon-info-sign"></i> Sin Datos</span> 
+            </td>
+        </tr>
+    </tfoot>
+</table>
+
+
+
+<div bsModal #modalEditarSitio="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" [config]="{backdrop: true}">
+  <div class="modal-dialog modal-lg size-modal-lg" style="width: 1030px !important;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Edición de Sitio</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="cancelarModalEditarSitio()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-sm-2 form-group">
+                    <label for="munNombreInput">Ubicacion Técnica (ID)</label>
+                    <span class="dato-tasa">1</span>
+                </div>
+                <div class="col-sm-2 form-group">
+                    <label for="munDomicilioInput">Nombre del Sitio</label>
+                    <span class="dato-tasa">Nombre sitio 1</span>
+                </div>
+                <div class="col-sm-2 form-group">
+                    <label for="munSectorContactoInput">Estructura</label>
+                    <span class="dato-tasa">FAST SITE</span>
+                </div>
+                <div class="col-sm-2 form-group">
+                    <label for="munTelefonoContactoInput">Estado</label>
+                    <span class="dato-tasa">ACTIVO</span>                                
+                </div>
+                <div class="col-sm-2 form-group">
+                    <label for="munCantSitiosConvenioRegularizacionInput">Dirección</label>
+                    <span class="dato-tasa">Avenida siempre viva 742</span>                                
+                </div>
+                <div class="col-sm-2 form-group">
+                    <label for="munTelefonoContactoInput">Latitud</label>
+                    <span class="dato-tasa">ACTIVO</span>                                
+                </div>                  
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-sm-2 form-group">
+                    <label for="munTelefonoContactoInput">Longitud</label>
+                    <span class="dato-tasa">40.67959657544238</span>                                
+                </div>
+                <div class="col-sm-2 form-group">
+                    <label for="munTelefonoContactoInput">Estado</label>
+                    <span class="dato-tasa">-74.20783996582031</span>                                
+                </div>
+                <div class="col-sm-2 form-group">
+                    <label for="munTelefonoContactoInput">Cluster</label>
+                    <span class="dato-tasa">Cluster Bx231</span>                                
+                </div>
+                <div class="col-sm-2 form-group">
+                    <label for="munTelefonoContactoInput">Localidad</label>
+                    <span class="dato-tasa">Córdoba</span>                                
+                </div>
+                <div class="col-sm-2 form-group">
+                    <label for="munTelefonoContactoInput">Tecnologías</label>
+                    <span class="dato-tasa">LTE</span>                                
+                </div>
+                <div class="col-sm-2 form-group">
+                    <label for="munTelefonoContactoInput">Tipo Solución</label>
+                    <span class="dato-tasa">Solucion 12</span>                                
+                </div>                
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-sm-2 form-group">
+                    <label for="munTelefonoContactoInput">Fecha Alta</label>
+                    <span class="dato-tasa">01/01/2010</span>                                
+                </div>
+                <div class="col-sm-2 form-group">
+                    <label for="munTelefonoContactoInput">Fecha Actualización</label>
+                    <span class="dato-tasa">01/09/2015</span>                                
+                </div>
+                <div class="col-sm-2 form-group">
+                    <label for="munTelefonoContactoInput">Alquilado</label>
+                    <span class="dato-tasa">NO</span>                                
+                </div>
+                <div class="col-sm-2 form-group">
+                    <label for="munTelefonoContactoInput">Peso Sitio</label>
+                    <span class="dato-tasa">541</span>                                
+                </div>                
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-lg-4 col-md-6 col-sm-6 form-group">
+                    <label for="munFechaOrdenanzaInput">Fecha de declaración ante el Municipio</label>
+                    <input class="form-control input-sm" type="date" id="munFechaOrdenanzaInput" name="munFechaOrdenanza" />
+                </div>       
+                <div class="col-lg-4 col-md-6 col-sm-6 form-group">
+                    <label for="munFechaOrdenanzaInput">Ordenanza Judicializada de Habilitación</label>
+                    <input class="form-control input-sm" type="number" id="munFechaOrdenanzaInput" name="munFechaOrdenanza" />
+                </div>       
+                <div class="col-lg-4 col-md-6 col-sm-6 form-group">
+                    <label for="munFechaOrdenanzaInput">Ordenanza Judicializada por Tasas</label>
+                    <input class="form-control input-sm" type="number" id="munFechaOrdenanzaInput" name="munFechaOrdenanza" />
+                </div>     
+            </div>
+        </div>
+
+   
+        <div class="form-actions text-md-center">
+          <div class="row">
+            <div class="col-xs-12">
+              <button type="button" class="btn btn-success pull-right m-xs" (click)="aceptarModalEditarSitio()"><i class="fa fa-save"></i> Guardar</button>
+              <button type="button" class="btn btn-default pull-right m-xs" data-dismiss="modal" (click)="cancelarModalEditarSitio()">Cancelar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

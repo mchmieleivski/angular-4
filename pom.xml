@@ -1,0 +1,61 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>ar.com.claro</groupId>
+	<artifactId>municipios-front-end</artifactId>
+	<packaging>war</packaging>
+	<version>1.0</version> 
+	<name>ledz-ng Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+
+	<dependencies>
+	</dependencies>
+
+	<build>
+	<plugins>
+	
+	<plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-resources-plugin</artifactId>
+		<version>3.0.2</version>
+		<executions>
+			<execution>
+				<id>copy-resources</id>
+				<!-- here the phase you need -->
+				<phase>verify</phase>
+				<goals>
+					<goal>copy-resources</goal>
+				</goals>
+				<configuration>
+					<outputDirectory>${project.build.directory}/${project.artifactId}-${project.version}</outputDirectory>
+					<resources>
+						<resource>
+							<directory>${project.basedir}/src/main/webapp/dist</directory>
+						</resource>
+					</resources>
+				</configuration>
+			</execution>
+		</executions>
+	</plugin>
+	
+	<plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-war-plugin</artifactId>
+		<version>3.0.0</version>
+		<configuration>
+			<archive>
+				<manifest>
+					<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+				</manifest>
+				<manifestEntries>
+					<Implementation-Build>${buildNumber}</Implementation-Build>
+				</manifestEntries>
+			</archive>
+			<warSourceExcludes>dist/**,src/**,node_modules/**,.tmp/**,angular-cli.json,karma.conf.js,package.json,protractor.conf.js,README.md,tslint.json</warSourceExcludes>
+<!-- 			<warSourceExcludes>node_modules/**,e2e/**,src/**</warSourceExcludes> -->
+		</configuration>
+	</plugin>
+	</plugins>
+		<finalName>municipios-front-end</finalName>
+	</build>
+</project>

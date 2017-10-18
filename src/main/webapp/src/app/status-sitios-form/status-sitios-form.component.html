@@ -1,0 +1,483 @@
+<div class="container-fluid" style="background: #f1f3f6;min-height: 100%">
+    <!--<form>-->
+    <div class="row">
+        <div class="col-xs-12 text-right">
+            <button type="button" class="btn btn-success pull-right m-xs"><i class="fa fa-save"></i> Guardar</button>
+            <button type="button" class="btn btn-default pull-right m-xs" [routerLink]=" ['../']">Cancelar</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="hpanel">
+                <div class="panel-heading">
+                    Datos del Sitio
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-3 form-group">
+                            <label for="mteTipoEstructuraInput">Ubicación Técnica</label>
+                            <p class="form-control-static">CO008</p>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label for="mteTipoEstructuraInput">Nombre del Sitio</label>
+                            <p class="form-control-static">Nombre Sitio CO008</p>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label for="mteTipoEstructuraInput">Dirección</label>
+                            <p class="form-control-static">Calle | Número</p>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label for="mteTipoEstructuraInput">Latitud</label>
+                            <p class="form-control-static">-33.240277</p>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label for="mteTipoEstructuraInput">Longitud</label>
+                            <p class="form-control-static">-62.392354</p>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label for="mteTipoEstructuraInput">Cluster</label>
+                            <p class="form-control-static">1|Cluster</p>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label for="mteTipoEstructuraInput">País</label>
+                            <p class="form-control-static">Argentina</p>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label for="mteTipoEstructuraInput">Provincia</label>
+                            <p class="form-control-static">Córdoba</p>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label for="mteTipoEstructuraInput">Departamento</label>
+                            <p class="form-control-static">Capital</p>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label for="mteTipoEstructuraInput">Localidad</label>
+                            <p class="form-control-static">Córdoba</p>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label for="mteTipoEstructuraInput">Tecnologías</label>
+                            <p class="form-control-static">2G - 3G</p>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label for="mteTipoEstructuraInput">Estado</label>
+                            <p class="form-control-static">Activo</p>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label for="mteTipoEstructuraInput">Owner</label>
+                            <p class="form-control-static">CLARO</p>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label for="mteTipoEstructuraInput">Tipo Solución</label>
+                            <p class="form-control-static">Macro</p>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label for="mteTipoEstructuraInput">Fecha Alta</label>
+                            <p class="form-control-static">01/01/2007</p>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label for="mteTipoEstructuraInput">Fecha de declaración ante el municipio</label>
+                            <p class="form-control-static"> - </p>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label for="mteTipoEstructuraInput">Fecha actualización</label>
+                            <p class="form-control-static">01/01/2007</p>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label for="mteTipoEstructuraInput">Alquilado</label>
+                            <p class="form-control-static">No</p>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label for="mteTipoEstructuraInput">Factor FO</label>
+                            <p class="form-control-static">1</p>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label for="mteTipoEstructuraInput">Peso Sitio</label>
+                            <p class="form-control-static">0 No se Encontraron Registros</p>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label for="munNombreInput">Ordenanza judicializada de habilitación</label>
+                            <input class="form-control input-sm" type="text" id="munNombreInput" name="munNombre" />
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label for="munNombreInput">Ordenanza judicializada por tasas</label>
+                            <input class="form-control input-sm" type="text" id="munNombreInput" name="munNombre" />
+                        </div>
+                        <div class="col-sm-12 form-group">
+                            <label for="mteTipoEstructuraInput">Observaciones</label>
+                            <p class="form-control-static">Observaciones sobre cualquier tema relacionado con el sitio</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="hpanel">
+                <div class="panel-heading">
+                    Tasas por Estructura del Sitio
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-3 form-group">
+                            <label for="mteTipoEstructuraInput">Tipo de Estructura</label>
+                            <p class="form-control-static">FAST SITE</p>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label for="mteMontoPagoUnicoInput">Monto Pago Único *</label>
+                            <p class="form-control-static">$ 6.000</p>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label for="mteFechaPagoUnicoInput">Fecha Pago Único *</label>
+                            <p class="form-control-static">30/10/07</p>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label for="mtePeriodicidadInput">Periodicidad *</label>
+                            <p class="form-control-static">Mensual</p>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label for="mteMontoRecurrenteInput">Monto Recurrente *</label>
+                            <p class="form-control-static">$ 1.000</p>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label for="mteFechaPrimerVencimientoInput">Primer Vencimiento *</label>
+                            <p class="form-control-static">31/1/2009</p>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label for="mteFechaPrimerVencimientoInput">Fin de Convenio *</label>
+                            <p class="form-control-static">ENERO DEL 2010</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="hpanel">
+                <div class="panel-heading">
+                    Tasas
+                </div>
+                <div class="panel-body">
+                    <div class="row p-r-none row-eq-height">
+                        <div class="col-md-3 p-l-none p-r-none">
+                            <!--<div class="col-md-12 p-r-none">
+                                <h5>Nuevo</h5>
+                            </div>-->
+                            <div class="col-sm-12 form-group">
+                                <label for="periodoInput">Periodo*</label>
+                                <div class="input-group">
+                                    <select class="form-control input-sm" id="mtsNroPeriodoInput" name="mtsNroPeriodo">
+                                      <option selected="true">Seleccione...</option>
+                                      <option>Enero</option>
+                                      <option>Febrero</option>
+                                      <option>Marzo</option>
+                                      <option>Abril</option>
+                                      <option>Mayo</option>
+                                      <option>Junio</option>
+                                      <option>Julio</option>
+                                      <option>Agosto</option>
+                                      <option>Septimbre</option>
+                                      <option>Octubre</option>
+                                      <option>Noviembre</option>
+                                      <option>Diciembre</option>
+                                    </select>
+                                    <span class="input-group-addon" style="color:darkslategray">Año</span>
+                                    <input class="form-control input-sm" type="number" id="anioInput" name="anio" placeholder="2017" />
+                                </div>
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <label for="mtsTipoEstructuraInput">Estado *</label>
+                                <select class="form-control input-sm" id="mtsTipoEstructuraInput" name="mtsTipoEstructura">
+                                  <option selected="true">Seleccione...</option>
+                                  <option>Derivado</option>
+                                  <option>Pago</option>
+                                  <option>Pendiente</option>
+                                  <option>Proceso de Pago</option>
+                                  <option>Suspensión</option>
+                                  <option>Judicializado</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <label for="mtsFechaPagoInput">Fecha Pago</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                    <input class="form-control input-sm" type="date" id="mtsFechaPagoInput" name="mtsFechaPago" />
+                                </div>
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <label for="mtsFechaDerivacionInput">Fecha Derivación</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                    <input class="form-control input-sm" type="date" id="mtsFechaDerivacionInput" name="mtsFechaDerivacion" />
+                                </div>
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <label for="mtsTieneReciboInput">Tiene Recibo de Pago</label>
+                                <select class="form-control input-sm" id="mtsTieneReciboInput" name="mtsTieneRecibo">
+                                  <option selected="true">Seleccione...</option>
+                                  <option>SI</option>
+                                  <option>NO</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <label for="mtsTieneLibreDeudaInput">Tiene Libre Deuda</label>
+                                <select class="form-control input-sm" id="mtsTieneLibreDeudaInput" name="mtsTieneLibreDeuda">
+                                  <option selected="true">Seleccione...</option>
+                                  <option>SI</option>
+                                  <option>NO</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-12 form-group text-uppercase">
+                                <label for="mteInformacionAdicionalInput">Información Adicional *</label>
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Otros</span>
+                                    <select class="form-control input-sm" id="msiOtrosInput" name="msiOtros">
+                                      <option selected="true">Seleccione...</option>
+                                      <option>SI</option>
+                                      <option>NO</option>
+                                  </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Derivado Por Monto Elevado</span>
+                                    <select class="form-control input-sm" id="msiDerivadoPorMontoElevadoInput" name="msiDerivadoPorMontoElevado">
+                                      <option selected="true">Seleccione...</option>
+                                      <option>SI</option>
+                                      <option>NO</option>
+                                  </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">En Conflicto</span>
+                                    <select class="form-control input-sm" id="msiEnConflictoInput" name="msiEnConflicto">
+                                      <option selected="true">Seleccione...</option>
+                                      <option>SI</option>
+                                      <option>NO</option>
+                                  </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Falta Ordenanza</span>
+                                    <select class="form-control input-sm" id="msiEnConflictoInput" name="msiEnConflicto">
+                                      <option selected="true">Seleccione...</option>
+                                      <option>SI</option>
+                                      <option>NO</option>
+                                  </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <label for="mtsObservacionesInput">Observaciones</label>
+                                <textarea class="form-control input-sm" id="mtsObservacionesInput" name="mtsObservaciones" rows="5" cols="10"></textarea>
+                            </div>
+                            <div class="col-sm-12 text-right">
+                                <button type="button" class="btn btn-primary pull-right m-xs"><i class="fa fa-plus"></i> Agregar</button>
+                                <button type="button" class="btn btn-default pull-right m-xs"> Cancelar</button>
+                            </div>
+                        </div>
+                        <div class="col-md-9 border-left">
+                            <!--<div class="col-md-12 p-r-none">
+                                <h5>Registrados</h5>
+                            </div>-->
+                            <div class="col-md-12 p-r-none">
+                                <table class="table table-slim table-hover table-striped m-b-none" cellpadding="1" cellspacing="1">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center text-uppercase" style="border-top: none;">Periodo</th>
+                                            <th class="text-center text-uppercase" style="border-top: none;">Estado</th>
+                                            <th class="text-center text-uppercase" style="border-top: none;">Fecha Pago</th>
+                                            <th class="text-center text-uppercase" style="border-top: none;">Fecha Derivación</th>
+                                            <th class="text-center text-uppercase" style="border-top: none;">Tiene Recibo de Pago</th>
+                                            <th class="text-center text-uppercase" style="border-top: none;">Tiene Libre Deuda</th>
+                                            <th class="text-center text-uppercase" style="border-top: none;">Observaciones</th>
+                                            <th class="text-center" style="border-top: none;width: 14px;"></th>
+                                            <th class="text-center" style="border-top: none;width: 14px;"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th class="text-center">Diciembre 2016</th>
+                                            <th class="text-center">Pago</th>
+                                            <th class="text-center">12/12/16</th>
+                                            <th class="text-center"> - </th>
+                                            <th class="text-center">SI</th>
+                                            <th class="text-center">NO</th>
+                                            <th class="text-center">...</th>
+                                            <th class="text-center" style="width: 14px;">
+                                                <button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                            </th>
+                                            <th class="text-center" style="width: 14px;">
+                                                <button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i></button>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-center">Noviembre 2016</th>
+                                            <th class="text-center">Pago</th>
+                                            <th class="text-center">12/11/16</th>
+                                            <th class="text-center"> - </th>
+                                            <th class="text-center">SI</th>
+                                            <th class="text-center">NO</th>
+                                            <th class="text-center">...</th>
+                                            <th class="text-center" style="width: 14px;">
+                                                <button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                            </th>
+                                            <th class="text-center" style="width: 14px;">
+                                                <button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i></button>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-center">Octubre 2016</th>
+                                            <th class="text-center">Pago</th>
+                                            <th class="text-center">13/10/16</th>
+                                            <th class="text-center"> - </th>
+                                            <th class="text-center">SI</th>
+                                            <th class="text-center">NO</th>
+                                            <th class="text-center">Se pagó un día despues</th>
+                                            <th class="text-center" style="width: 14px;">
+                                                <button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                            </th>
+                                            <th class="text-center" style="width: 14px;">
+                                                <button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i></button>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-center">Septiembre 2016</th>
+                                            <th class="text-center">Pago</th>
+                                            <th class="text-center">12/09/16</th>
+                                            <th class="text-center"> - </th>
+                                            <th class="text-center">SI</th>
+                                            <th class="text-center">NO</th>
+                                            <th class="text-center">...</th>
+                                            <th class="text-center" style="width: 14px;">
+                                                <button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                            </th>
+                                            <th class="text-center" style="width: 14px;">
+                                                <button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i></button>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-center">Agosto 2016</th>
+                                            <th class="text-center">Pago</th>
+                                            <th class="text-center">12/08/16</th>
+                                            <th class="text-center"> - </th>
+                                            <th class="text-center">SI</th>
+                                            <th class="text-center">NO</th>
+                                            <th class="text-center">...</th>
+                                            <th class="text-center" style="width: 14px;">
+                                                <button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                            </th>
+                                            <th class="text-center" style="width: 14px;">
+                                                <button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i></button>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-center">Julio 2016</th>
+                                            <th class="text-center">Pago</th>
+                                            <th class="text-center">12/07/16</th>
+                                            <th class="text-center"> - </th>
+                                            <th class="text-center">SI</th>
+                                            <th class="text-center">NO</th>
+                                            <th class="text-center">...</th>
+                                            <th class="text-center" style="width: 14px;">
+                                                <button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                            </th>
+                                            <th class="text-center" style="width: 14px;">
+                                                <button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i></button>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-center">Junio 2016</th>
+                                            <th class="text-center">Pago</th>
+                                            <th class="text-center">12/06/16</th>
+                                            <th class="text-center"> - </th>
+                                            <th class="text-center">SI</th>
+                                            <th class="text-center">NO</th>
+                                            <th class="text-center">...</th>
+                                            <th class="text-center" style="width: 14px;">
+                                                <button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                            </th>
+                                            <th class="text-center" style="width: 14px;">
+                                                <button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i></button>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-center">Mayo 2016</th>
+                                            <th class="text-center">Pago</th>
+                                            <th class="text-center">12/05/16</th>
+                                            <th class="text-center"> - </th>
+                                            <th class="text-center">SI</th>
+                                            <th class="text-center">NO</th>
+                                            <th class="text-center">...</th>
+                                            <th class="text-center" style="width: 14px;">
+                                                <button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                            </th>
+                                            <th class="text-center" style="width: 14px;">
+                                                <button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i></button>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-center">Abril 2016</th>
+                                            <th class="text-center">Pago</th>
+                                            <th class="text-center">12/04/16</th>
+                                            <th class="text-center"> - </th>
+                                            <th class="text-center">SI</th>
+                                            <th class="text-center">NO</th>
+                                            <th class="text-center">...</th>
+                                            <th class="text-center" style="width: 14px;">
+                                                <button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                            </th>
+                                            <th class="text-center" style="width: 14px;">
+                                                <button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i></button>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-center">Marzo 2016</th>
+                                            <th class="text-center">Pago</th>
+                                            <th class="text-center">12/03/16</th>
+                                            <th class="text-center"> - </th>
+                                            <th class="text-center">SI</th>
+                                            <th class="text-center">NO</th>
+                                            <th class="text-center">...</th>
+                                            <th class="text-center" style="width: 14px;">
+                                                <button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                            </th>
+                                            <th class="text-center" style="width: 14px;">
+                                                <button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i></button>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-center">Febrero 2016</th>
+                                            <th class="text-center">Pago</th>
+                                            <th class="text-center">12/02/16</th>
+                                            <th class="text-center"> - </th>
+                                            <th class="text-center">SI</th>
+                                            <th class="text-center">NO</th>
+                                            <th class="text-center">...</th>
+                                            <th class="text-center" style="width: 14px;">
+                                                <button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                            </th>
+                                            <th class="text-center" style="width: 14px;">
+                                                <button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i></button>
+                                            </th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-xs-12 text-right">
+                                <pagination style="margin:0" [totalItems]="totalItems" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)" previousText="anterior" nextText="siguiente" firstText="primera" lastText="última"></pagination>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 text-right">
+            <button type="button" class="btn btn-success pull-right m-xs"><i class="fa fa-save"></i> Guardar</button>
+            <button type="button" class="btn btn-default pull-right m-xs" [routerLink]=" ['../']">Cancelar</button>
+        </div>
+    </div>
+    <!--    </form>-->
+</div>

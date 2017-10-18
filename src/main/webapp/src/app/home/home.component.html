@@ -1,0 +1,330 @@
+<div class="container-fluid" style="background: #f1f3f6;min-height: 100%">
+    <div class="row">
+        <div class="col-xs-12 m-b-none p-b-none">
+            <button class="btn btn-success btn-sm pull-right" type="button" [routerLink]="['/home/nuevo']">
+                <i class="fa fa-search"></i> Nuevo Registro
+            </button>
+        </div>
+        <div class="col-xs-12">
+            <div class="hpanel">
+                <div class="panel-heading">
+                    Filtros
+                </div>
+                <div class="panel-body ">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label style="margin-bottom:0">Nombre</label>
+                            <p class="input-group input-group-sm" style="width: 100%">
+                                <input type="text" class="form-control" placeholder="Nombre..." />
+                            </p>
+                        </div>
+                        <div class="col-sm-3">
+                            <label style="margin-bottom:0">Contacto</label>
+                            <p class="input-group input-group-sm" style="width: 100%">
+                                <input type="text" class="form-control" placeholder="Contacto..." />
+                            </p>
+                        </div>
+                        
+                         <div class="col-sm-3">
+                            <label style="margin-bottom:0">Compañía</label>
+                            <p class="input-group input-group-sm" style="width: 100%">
+                                <input type="text" class="form-control" placeholder="Compañía..." />
+                            </p>
+                        </div>
+                         <div class="col-sm-3">
+                            <label style="margin-bottom:0">País</label>
+                            <p class="input-group input-group-sm" style="width: 100%">
+                                <select class="form-control input-sm" name="pais">
+                                            <option value="{{null}}">Todas</option>
+                                            <option>Argentina</option>
+                                            <option>Uruguay</option>
+                                            <option>Paraguay</option>
+                                </select>
+                            </p>
+                        </div>
+                        <div class="col-sm-3">
+                            <label style="margin-bottom:0">Provincia</label>
+                            <p class="input-group input-group-sm" style="width: 100%">
+                                <select class="form-control input-sm" name="provincia">
+                                            <option value="{{null}}">Todas</option>
+                                            <option>Buenos Aires</option>
+                                            <option>Catamarca</option>
+                                            <option>Córdoba</option>
+                                            <option>Entre Ríos</option>
+                                            <option>Formosa</option>
+                                            <option>Jujuy</option>
+                                            <option>Misiones</option>
+                                            <option>Salta</option>
+                                            <option>Santa Cruz</option>
+                                            <option>Tierra del Fuego</option>
+                                            <option>Tucumán</option>
+                                </select>
+                            </p>
+                        </div>
+                         <div class="col-sm-3">
+                            <label style="margin-bottom:0">Departamento</label>
+                            <p class="input-group input-group-sm" style="width: 100%">
+                                <select class="form-control input-sm" name="Departamento">
+                                            <option value="{{null}}">Todas</option>
+                                            <option>Principal</option>
+                                       
+                                </select>
+                            </p>
+                        </div>
+
+                         <div class="col-sm-3">
+                            <label style="margin-bottom:0">Localidad</label>
+                            <p class="input-group input-group-sm" style="width: 100%">
+                                <select class="form-control input-sm" name="Localidad">
+                                            <option value="{{null}}">Todas</option>
+                                            <option>Capital</option>
+                                       
+                                </select>
+                            </p>
+                        </div>
+                       
+                        <div class="col-sm-3">
+                            <label style="margin-bottom:0">Gestor Asignado</label>
+                            <p class="input-group input-group-sm" style="width: 100%">
+                                <input type="text" class="form-control" placeholder="Gestor Asignado..." />
+                            </p>
+                        </div>
+                        <div class="col-xs-6 text-right">
+                            <label style="margin-bottom:0;color:transparent;"> </label>
+                            <p class="input-group input-group-sm" style="width: 100%">
+                                <button class="btn btn-primary btn-sm" ladda="buscando" type="button"><i class="fa fa-search"></i> Buscar</button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="hpanel">
+                <div class="panel-heading">
+                    Municipios
+                </div>
+
+                <div class="panel-body p-none" style="padding-top: 0px;padding-bottom: 0px;">
+                    <table class="table table-slim table-hover table-striped m-b-none" cellpadding="1" cellspacing="1">
+                        <thead>
+                            <tr class="text-uppercase">
+                                <th class="text-center" style="border-top: none;">ID</th>
+                                <th class="text-center" style="border-top: none;">Nombre</th>
+                                <th class="text-center" style="border-top: none;">Contacto</th>
+                                <th class="text-center" style="border-top: none;">País</th>
+                                <th class="text-center" style="border-top: none;">Provincia</th>
+                                <th class="text-center" style="border-top: none;">Departamento</th>
+                                <th class="text-center" style="border-top: none;">Localidad</th>
+                              <th class="text-center" style="border-top: none;">Gestor Asignado</th>
+                              
+                                <th class="text-center" style="border-top: none;width: 10px;">Cant. Sitios en Mun</th>
+                                <th class="text-center" style="border-top: none;width: 18px;">Cant. Sitios Regularizados</th>
+                                  <th class="text-center" style="border-top: none;width: 14px;"></th>
+                                <th class="text-center" style="border-top: none;width: 14px;"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center" style="vertical-align: middle;">1</td>
+                                <td class="text-center" style="vertical-align: middle;">La Matanza - Buenos Aires</td>
+                                 <td class="text-center" style="vertical-align: middle;">name@email.com</td>
+                                 <td class="text-center" style="vertical-align: middle;">ARGENTINA</td>
+                                <td class="text-center" style="vertical-align: middle;">Buenos Aires</td>
+                                <td class="text-center" style="vertical-align: middle;"></td>
+                                <td class="text-center" style="vertical-align: middle;"></td>
+                               <td class="text-center" style="vertical-align: middle;">Gestor Inicial</td>
+                               <td class="text-center" style="vertical-align: middle;"></td>
+                                <td class="text-center" style="vertical-align: middle;">1</td>
+                                <td class="text-center" style="vertical-align: middle;"></td>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                </th>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i></button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="text-center" style="vertical-align: middle;">2</td>
+                                <td class="text-center" style="vertical-align: middle;">Municipalidad de San Isidro - Buenos Aires</td>
+                                <td class="text-center" style="vertical-align: middle;">name@email.com</td>
+                                 <td class="text-center" style="vertical-align: middle;">ARGENTINA</td>
+                                <td class="text-center" style="vertical-align: middle;">Buenos Aires</td>
+                                <td class="text-center" style="vertical-align: middle;"></td>
+                                <td class="text-center" style="vertical-align: middle;"></td>
+                               <td class="text-center" style="vertical-align: middle;">Gestor Inicial</td>
+                               <td class="text-center" style="vertical-align: middle;"></td>
+                                <td class="text-center" style="vertical-align: middle;">1</td>
+                                <td class="text-center" style="vertical-align: middle;"></td>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                </th>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i></button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="text-center" style="vertical-align: middle;">3</td>
+                                <td class="text-center" style="vertical-align: middle;">Municipalidad de Villa de Soto - Córdoba</td>
+                                <td class="text-center" style="vertical-align: middle;">name@email.com</td>
+                                 <td class="text-center" style="vertical-align: middle;">ARGENTINA</td>
+                                <td class="text-center" style="vertical-align: middle;">Cordoba</td>
+                                <td class="text-center" style="vertical-align: middle;"></td>
+                                <td class="text-center" style="vertical-align: middle;"></td>
+                               <td class="text-center" style="vertical-align: middle;">Gestor Inicial</td>
+                               <td class="text-center" style="vertical-align: middle;"></td>
+                                <td class="text-center" style="vertical-align: middle;">30 </td>
+                                <td class="text-center" style="vertical-align: middle;"></td>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                </th>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i></button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="text-center" style="vertical-align: middle;">4</td>
+                                <td class="text-center" style="vertical-align: middle;">Municipalidad de Hurlingham - Buenos Aires</td>
+                                 <td class="text-center" style="vertical-align: middle;">name@email.com</td>
+                                 <td class="text-center" style="vertical-align: middle;">ARGENTINA</td>
+                                <td class="text-center" style="vertical-align: middle;">Buenos Aires</td>
+                                <td class="text-center" style="vertical-align: middle;"></td>
+                                <td class="text-center" style="vertical-align: middle;"></td>
+                               <td class="text-center" style="vertical-align: middle;">Gestor Inicial</td>
+                               <td class="text-center" style="vertical-align: middle;"></td>
+                                <td class="text-center" style="vertical-align: middle;">1</td>
+                                <td class="text-center" style="vertical-align: middle;"></td>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                </th>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i></button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="text-center" style="vertical-align: middle;">5</td>
+                                <td class="text-center" style="vertical-align: middle;">Municipalidad de General Las Heras - Buenos Aires</td>
+                                <td class="text-center" style="vertical-align: middle;">name@email.com</td>
+                                 <td class="text-center" style="vertical-align: middle;">ARGENTINA</td>
+                                <td class="text-center" style="vertical-align: middle;">Buenos Aires</td>
+                                <td class="text-center" style="vertical-align: middle;"></td>
+                                <td class="text-center" style="vertical-align: middle;"></td>
+                               <td class="text-center" style="vertical-align: middle;">Gestor Inicial</td>
+                               <td class="text-center" style="vertical-align: middle;"></td>
+                                <td class="text-center" style="vertical-align: middle;">1</td>
+                                <td class="text-center" style="vertical-align: middle;"></td>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                </th>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i></button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="text-center" style="vertical-align: middle;">6</td>
+                                <td class="text-center" style="vertical-align: middle;">Municipalidad de Cañuelas - Buenos Aires</td>
+                                <td class="text-center" style="vertical-align: middle;">name@email.com</td>
+                                 <td class="text-center" style="vertical-align: middle;">ARGENTINA</td>
+                                <td class="text-center" style="vertical-align: middle;">Buenos Aires</td>
+                                <td class="text-center" style="vertical-align: middle;"></td>
+                                <td class="text-center" style="vertical-align: middle;"></td>
+                               <td class="text-center" style="vertical-align: middle;">Gestor Inicial</td>
+                               <td class="text-center" style="vertical-align: middle;"></td>
+                                <td class="text-center" style="vertical-align: middle;">1</td>
+                                <td class="text-center" style="vertical-align: middle;"></td>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                </th>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i></button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="text-center" style="vertical-align: middle;">7</td>
+                                <td class="text-center" style="vertical-align: middle;">Municipalidad de General Levalle - Cordoba</td>
+                                 <td class="text-center" style="vertical-align: middle;">name@email.com</td>
+                                 <td class="text-center" style="vertical-align: middle;">ARGENTINA</td>
+                                <td class="text-center" style="vertical-align: middle;">Cordoba</td>
+                                <td class="text-center" style="vertical-align: middle;"></td>
+                                <td class="text-center" style="vertical-align: middle;"></td>
+                               <td class="text-center" style="vertical-align: middle;">Gestor Inicial</td>
+                               <td class="text-center" style="vertical-align: middle;"></td>
+                                <td class="text-center" style="vertical-align: middle;">1</td>
+                                <td class="text-center" style="vertical-align: middle;"></td>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                </th>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i></button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="text-center" style="vertical-align: middle;">8</td>
+                                <td class="text-center" style="vertical-align: middle;">Municipalidad de Tres de Febrero - Buenos Aires</td>
+                                <td class="text-center" style="vertical-align: middle;">name@email.com</td>
+                                 <td class="text-center" style="vertical-align: middle;">ARGENTINA</td>
+                                <td class="text-center" style="vertical-align: middle;">Buenos Aires</td>
+                                <td class="text-center" style="vertical-align: middle;"></td>
+                                <td class="text-center" style="vertical-align: middle;"></td>
+                               <td class="text-center" style="vertical-align: middle;">Gestor Inicial</td>
+                               <td class="text-center" style="vertical-align: middle;"></td>
+                                <td class="text-center" style="vertical-align: middle;">1</td>
+                                <td class="text-center" style="vertical-align: middle;"></td>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                </th>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i></button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="text-center" style="vertical-align: middle;">9</td>
+                                <td class="text-center" style="vertical-align: middle;">Municipalidad de La Plata - Buenos Aires</td>
+                                <td class="text-center" style="vertical-align: middle;">name@email.com</td>
+                                 <td class="text-center" style="vertical-align: middle;">ARGENTINA</td>
+                                <td class="text-center" style="vertical-align: middle;">Buenos Aires</td>
+                                <td class="text-center" style="vertical-align: middle;"></td>
+                                <td class="text-center" style="vertical-align: middle;"></td>
+                               <td class="text-center" style="vertical-align: middle;">Gestor Inicial</td>
+                               <td class="text-center" style="vertical-align: middle;"></td>
+                                <td class="text-center" style="vertical-align: middle;">1</td>
+                                <td class="text-center" style="vertical-align: middle;"></td>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                </th>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i></button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="text-center" style="vertical-align: middle;">10</td>
+                                <td class="text-center" style="vertical-align: middle;">Municipalidad de San Rafael - Mendoza</td>
+                                 <td class="text-center" style="vertical-align: middle;">name@email.com</td>
+                                 <td class="text-center" style="vertical-align: middle;">ARGENTINA</td>
+                                <td class="text-center" style="vertical-align: middle;">Mendoza</td>
+                                <td class="text-center" style="vertical-align: middle;"></td>
+                                <td class="text-center" style="vertical-align: middle;"></td>
+                               <td class="text-center" style="vertical-align: middle;">Gestor Inicial</td>
+                               <td class="text-center" style="vertical-align: middle;"></td>
+                                <td class="text-center" style="vertical-align: middle;">1</td>
+                                <td class="text-center" style="vertical-align: middle;"></td>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                </th>
+                                <th class="text-center" style="width: 14px;">
+                                    <button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i></button>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <span class="col-xs-12 text-right">
+                    <pagination style="margin:0" [totalItems]="totalItems" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)" previousText="anterior" nextText="siguiente" firstText="primera" lastText="última"></pagination>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

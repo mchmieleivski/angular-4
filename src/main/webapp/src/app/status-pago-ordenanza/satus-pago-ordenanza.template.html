@@ -1,0 +1,58 @@
+<div class="container-fluid" style="background: #f1f3f6;min-height: 100%">
+  <div class="row">
+    <div class="col-xs-12 text-right">
+      <button type="button" class="btn btn-success pull-right m-xs"><i class="fa fa-save"></i> Guardar</button>
+      <button type="button" class="btn btn-default pull-right m-xs" [routerLink]=" ['../']">Cancelar</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+
+      <div class="hpanel">
+        <div class="panel-heading">
+          Tasas
+        </div>
+        <div class="panel-body">
+          <status-pago-ordenanza-tasas (seleccionarTasaOutput)="cargarSitios($event)"></status-pago-ordenanza-tasas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+
+      <div class="hpanel">
+        <div class="panel-heading">
+          Sitios
+        </div>
+        <div class="panel-body">
+          <status-pago-ordenanza-sitios [sitios]="sitios" (seleccionarSitioOutput)="cargarPagos($event)"></status-pago-ordenanza-sitios>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+
+      <div class="hpanel">
+        <div class="panel-heading">
+          Status Pago
+        </div>
+        <div class="panel-body">
+          <status-pago-ordenanza-pagos [pagos]="pagos"></status-pago-ordenanza-pagos>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 text-right">
+      <button type="button" class="btn btn-success pull-right m-xs"><i class="fa fa-save"></i> Guardar</button>
+      <button type="button" class="btn btn-default pull-right m-xs" [routerLink]=" ['../']">Cancelar</button>
+    </div>
+  </div>
+  
+</div>

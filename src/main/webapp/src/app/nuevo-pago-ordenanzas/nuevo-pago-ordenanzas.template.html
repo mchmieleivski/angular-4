@@ -1,0 +1,245 @@
+<div class="container-fluid" style="background: #f1f3f6;min-height: 100%">
+    <div class="row">
+        <div class="col-xs-12 text-right">
+            <button type="button" class="btn btn-success pull-right m-xs"><i class="fa fa-save"></i> Guardar</button>
+            <button type="button" class="btn btn-default pull-right m-xs" [routerLink]=" ['../']">Cancelar</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="hpanel">
+                <div class="panel-heading">
+                    Datos de la Tasa
+                </div>
+                <div class="panel-body">
+                    <datos-tasa [tasa]="tasa"></datos-tasa>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="hpanel">
+                <div class="panel-heading">
+                    Status de Pago
+                </div>
+                <div class="panel-body">
+                    <div class="row p-r-none row-eq-height">
+                        <div class="col-md-3 p-l-none p-r-none">
+                            <div class="col-sm-12 form-group">
+                                <label for="mteFechaPagoInput">Fecha Pago</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                    <input [(ngModel)]="nuevoPago.fechaPago" class="form-control input-sm" type="date" id="mteFechaPagoInput" name="mteFechaPago" />
+                                </div>
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <label for="mteEstadoInput">Estado</label>
+                                <select [(ngModel)]="nuevoPago.estado" class="form-control input-sm" id="mteEstadoInput" name="mteEstado">
+                                  <option selected="true" value="null">Seleccione...</option>
+                                  <option value="PAGO">PAGO</option>
+                                  <option value="PENDIENTE">PENDIENTE</option>
+                                  <option value="DERIVADO">DERIVADO</option>
+                                  <option value="PROCESO">PROCESO DE PAGO</option>
+                                  <option value="SUSPENSION">SUSPENSION</option>
+                                  <option value="JUDICIALIZADO">JUDICIALIZADO</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <label for="mteMontoPagoInput">Monto del Pago</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span>
+                                    <input [(ngModel)]="nuevoPago.montoPago" class="form-control input-sm" type="number" id="mteMontoPagoInput" name="mteMontoPago" />
+                                </div>
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <label for="mteReciboPagoInput">Tiene Recibo de Pago</label>
+                                <select [(ngModel)]="nuevoPago.reciboPago" class="form-control input-sm" id="mteReciboPagoInput" name="mteReciboPago">
+                                  <option selected="true" value="null">Seleccione...</option>
+                                  <option value="SI">SI</option>
+                                  <option value="NO">NO</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <label for="mteLibreDeudaInput">Tiene Libre de Deuda</label>
+                                <select [(ngModel)]="nuevoPago.libreDeuda" class="form-control input-sm" id="mteLibreDeudaInput" name="mteLibreDeuda">
+                                  <option selected="true" value="null">Seleccione...</option>
+                                  <option value="SI">SI</option>
+                                  <option value="NO">NO</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <label for="mteFechaDerivacionInput">Fecha de Derivación</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                    <input [(ngModel)]="nuevoPago.fechaDerivacion" class="form-control input-sm" type="date" id="mteFechaDerivacionInput" name="mteFechaDerivacion" />
+                                </div>
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <label for="mteInformacionAdicionalInput">Información Adicional</label>
+                                  <select [(ngModel)]="nuevoPago.informacionAdicional" class="form-control input-sm" id="mteInformacionAdicionalInput" name="mteInformacionAdicional">
+                                    <option selected="true" value="null">Seleccione...</option>
+                                    <option value="Por Monto Elevado">Por Monto Elevado</option>
+                                    <option value="En Conflicto">En Conflicto</option>
+                                    <option value="Falta Ordenanza">Falta Ordenanza</option>
+                                    <option value="Otros">Otros</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-12 form-group">
+                                <label>Sitios</label>
+                            </div>
+                              <div class="col-md-12 p-r-none" style="height: 340px;overflow-y: auto">
+                                <table class="table table-slim table-hover table-striped m-b-none" cellpadding="1" cellspacing="1">
+                                  <thead>                                   
+                                    <tr>
+                                      <th class="text-center text-uppercase" style="border-top: none;">Ubicación Técnica (ID)</th>
+                                      <th class="text-center text-uppercase" style="border-top: none;">Nombre</th>
+                                      <th class="text-center" style="border-top: none;width: 14px;"></th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th class="text-center">1</th>
+                                      <th class="text-center">Sitio1</th>
+                                      <th class="text-center" style="width: 14px;">
+                                        <input class="form-check-input" type="checkbox" id="blankCheckbox" aria-label="...">
+                                      </th>                                            
+                                    </tr>
+                                    <tr>
+                                      <th class="text-center">2</th>
+                                      <th class="text-center">Sitio2</th>
+                                      <th class="text-center" style="width: 14px;">
+                                        <input class="form-check-input" type="checkbox" id="blankCheckbox" aria-label="...">
+                                      </th>                                            
+                                    </tr>
+                                    <tr>
+                                      <th class="text-center">3</th>
+                                      <th class="text-center">Sitio3</th>
+                                      <th class="text-center" style="width: 14px;">
+                                        <input class="form-check-input" type="checkbox" id="blankCheckbox" aria-label="...">
+                                      </th>                                            
+                                    </tr>
+                                    <tr>
+                                      <th class="text-center">4</th>
+                                      <th class="text-center">Sitio4</th>
+                                      <th class="text-center" style="width: 14px;">
+                                        <input class="form-check-input" type="checkbox" id="blankCheckbox" aria-label="...">
+                                      </th>                                            
+                                    </tr>
+                                    <tr>
+                                      <th class="text-center">5</th>
+                                      <th class="text-center">Sitio5</th>
+                                      <th class="text-center" style="width: 14px;">
+                                        <input class="form-check-input" type="checkbox" id="blankCheckbox" aria-label="...">
+                                      </th>                                            
+                                    </tr>
+                                    <tr>
+                                      <th class="text-center">6</th>
+                                      <th class="text-center">Sitio6</th>
+                                      <th class="text-center" style="width: 14px;">
+                                        <input class="form-check-input" type="checkbox" id="blankCheckbox" aria-label="...">
+                                      </th>                                            
+                                    </tr>
+                                    <tr>
+                                      <th class="text-center">7</th>
+                                      <th class="text-center">Sitio7</th>
+                                      <th class="text-center" style="width: 14px;">
+                                        <input class="form-check-input" type="checkbox" id="blankCheckbox" aria-label="...">
+                                      </th>                                            
+                                    </tr>
+                                    <tr>
+                                      <th class="text-center">8</th>
+                                      <th class="text-center">Sitio8</th>
+                                      <th class="text-center" style="width: 14px;">
+                                        <input class="form-check-input" type="checkbox" id="blankCheckbox" aria-label="...">
+                                      </th>                                            
+                                    </tr>
+                                    <tr>
+                                      <th class="text-center">9</th>
+                                      <th class="text-center">Sitio9</th>
+                                      <th class="text-center" style="width: 14px;">
+                                        <input class="form-check-input" type="checkbox" id="blankCheckbox" aria-label="...">
+                                      </th>                                            
+                                    </tr>
+                                    <tr>
+                                      <th class="text-center">10</th>
+                                      <th class="text-center">Sitio10</th>
+                                      <th class="text-center" style="width: 14px;">
+                                        <input class="form-check-input" type="checkbox" id="blankCheckbox" aria-label="...">
+                                      </th>                                            
+                                    </tr>                                        
+                                  </tbody>
+                                </table>
+                              </div>
+
+
+
+                            <div class="col-sm-12 form-group">
+                                <label for="mteObservacionesInput">Observaciones</label>
+                                <textarea [(ngModel)]="nuevoPago.observaciones" style="resize: none;" class="form-control" name="mteObservaciones" id="mteObservacionesInput" rows="3"></textarea>
+                            </div>
+                            <div class="col-sm-12 text-right">
+                                <button type="button" class="btn btn-primary pull-right m-xs" (click)="agregar()"><i class="fa fa-plus"></i> Agregar</button>
+                                <button type="button" class="btn btn-default pull-right m-xs"> Cancelar</button>
+                            </div>
+                        </div>
+                        <div class="col-md-9 border-left">
+                            <div class="col-md-12 p-r-none" style="height: 893px;overflow-y: auto">
+                                <table class="table table-slim table-hover table-striped m-b-none" cellpadding="1" cellspacing="1" style="overflow-x: auto">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center text-uppercase" style="border-top: none;">Sitio</th>
+                                            <th class="text-center text-uppercase" style="border-top: none;">Fecha Pago</th>
+                                            <th class="text-center text-uppercase" style="border-top: none;">Estado</th>
+                                            <th class="text-center text-uppercase" style="border-top: none;">Monto del Pago</th>
+                                            <th class="text-center text-uppercase" style="border-top: none;">Tiene Recibo de Pago</th>
+                                            <th class="text-center text-uppercase" style="border-top: none;">Tiene Libre de Deuda</th>
+                                            <th class="text-center text-uppercase" style="border-top: none;">Fecha de Derivación</th>
+                                            <th class="text-center text-uppercase" style="border-top: none;">Información Adicional</th>
+                                            <th class="text-center text-uppercase" style="border-top: none;">Observaciones</th>
+                                            <th class="text-center" style="border-top: none;width: 14px;"></th>
+                                            <th class="text-center" style="border-top: none;width: 14px;"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody *ngIf="pagos != null && pagos.length > 0">
+                                        <tr *ngFor="let pago of pagos">
+                                            <th class="text-center">{{pago.sitio}}</th>
+                                            <th class="text-center">{{pago.fechaPago | date: 'dd/MM/yyyy'}}</th>
+                                            <th class="text-center">{{pago.estado}}</th>
+                                            <th class="text-center">$ {{pago.montoPago}}</th>
+                                            <th class="text-center">{{pago.reciboPago}}</th>
+                                            <th class="text-center">{{pago.libreDeuda}}</th>
+                                            <th class="text-center">{{pago.fechaDerivacion | date: 'dd/MM/yyyy'}}</th>
+                                            <th class="text-center">{{pago.informacionAdicional}}</th>
+                                            <th class="text-center">{{pago.observaciones}}</th>
+                                            <th class="text-center" style="width: 14px;">
+                                                <button (click)="editar(pago)" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i></button>
+                                            </th>
+                                            <th class="text-center" style="width: 14px;">
+                                                <button (click)="eliminar(pago)" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i></button>
+                                            </th>
+                                        </tr>                                        
+                                        
+                                    </tbody>
+                                    <tfoot *ngIf="pagos == null || pagos.length < 1">
+                                        <tr>
+                                            <td colspan="9" class="text-center">                
+                                                  <span><i class="glyphicon glyphicon-info-sign"></i> Sin Datos</span> 
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 text-right">
+            <button type="button" class="btn btn-success pull-right m-xs"><i class="fa fa-save"></i> Guardar</button>
+            <button type="button" class="btn btn-default pull-right m-xs" [routerLink]=" ['../']">Cancelar</button>
+        </div>
+    </div>
+    <!--    </form>-->
+</div>
